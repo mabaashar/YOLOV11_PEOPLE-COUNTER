@@ -10,7 +10,7 @@ import cv2
 from ultralytics import solutions
 
 #read the video feed
-cap = cv2.VideoCapture("media/vid_1.mov")
+cap = cv2.VideoCapture("path/to/input")
 #for webcam use 0 as the source
 #cap = cv2.VideoCapture(0)
 
@@ -21,7 +21,7 @@ w, h, fps = (int(cap.get(x)) for x in (cv2.CAP_PROP_FRAME_WIDTH,
                                        cv2.CAP_PROP_FPS))
 
 #output video after processing
-video_writer = cv2.VideoWriter("v_1_out.mov",
+video_writer = cv2.VideoWriter("path/to/output",
                                cv2.VideoWriter_fourcc(*"mp4v"),
                                fps, (w, h))
 
